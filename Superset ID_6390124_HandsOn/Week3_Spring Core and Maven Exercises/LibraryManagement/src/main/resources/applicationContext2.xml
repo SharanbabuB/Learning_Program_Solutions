@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Bean for BookRepository2 -->
+    <bean id="bookRepository2" class="com.library.repository.BookRepository2" />
+
+    <!-- Bean for BookService2 with DI -->
+    <bean id="bookService2" class="com.library.service.BookService2">
+        <property name="bookRepository2" ref="bookRepository2"/>
+    </bean>
+
+</beans>
